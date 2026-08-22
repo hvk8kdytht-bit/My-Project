@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# 虚拟环境
+venv/
+env/
+.venv/
+
+# 数据集（太大，不上传）
+datasets/
+*.zip
+co-tracker.zip
+RGB+RGB-D.zip
+
+# 模型权重和 checkpoint
+checkpoints/
+outputs/baseline_rgb/
+outputs/baseline_rgbd/
+outputs/smoke_rgb/
+outputs/eval_smoke/
+*.pth
+*.pt
+
+# 第三方源码
+co-tracker-src/
+
+# 输出和临时文件
+output/
+outputs/evaluation/
+outputs/evaluation-report/
+outputs/evaluation_full/
+outputs/cotracker_test/videos/
+outputs/eval_rgb_real/
+outputs/eval_rgbd_real/
+*.log
+*.tmp
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 项目特定
+.trae-html-share-packages/
+project-progress-report/
+PROGRESS_SUMMARY.txt
