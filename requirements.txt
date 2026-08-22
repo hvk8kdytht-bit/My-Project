@@ -1,0 +1,28 @@
+# 项目依赖
+# 核心依赖
+numpy>=1.24
+scipy>=1.10
+opencv-python>=4.8
+pillow>=10.0
+matplotlib>=3.7
+
+# PyTorch (根据CUDA版本单独安装)
+# torch>=2.0
+# torchvision>=0.15
+
+# 数据处理
+pandas>=2.0
+pyyaml>=6.0
+
+# 深度学习工具
+tqdm>=4.65
+tensorboard>=2.14
+huggingface_hub>=0.17
+
+# 可选 - 串口传感器
+pyserial>=3.5
+
+# 可选 - 6D位姿评估
+# bop_toolkit
+# pyrender
+# trimesh
