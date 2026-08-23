@@ -1,0 +1,20 @@
+{
+  "model": "CoTracker3",
+  "test": "sliding_simulation",
+  "frames": 150,
+  "resolution": "640x480",
+  "grid_size": 15,
+  "num_points": 225,
+  "tracking_time_s": 49.03,
+  "visibility": 0.993,
+  "moving_points": 149,
+  "static_points": 76,
+  "mean_pixel_disp": 5.08,
+  "max_pixel_disp": 39.32,
+  "gt_object_displacements_mm": {
+    "box": 78.5,
+    "ball": 62.4,
+    "cyl": 102.4
+  },
+  "video": "outputs\\cotracker_sliding_test\\videos\\sliding_tracking.mp4"
+}
