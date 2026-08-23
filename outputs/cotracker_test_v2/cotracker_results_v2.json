@@ -1,0 +1,53 @@
+{
+  "model": "CoTracker3 (scaled_offline)",
+  "version": "v2 (depth filter + SavGol)",
+  "device": "cpu",
+  "num_scenes": 2,
+  "results": [
+    {
+      "scene_id": "000058",
+      "obj_id": 3,
+      "obj_name": "003_sugar_box",
+      "num_frames": 60,
+      "num_points": 7,
+      "tracking_time_s": 11.47,
+      "visibility_rate": 0.4833,
+      "tracking_accuracy": 0.7389,
+      "in_mask_count": 150,
+      "total_visible": 203,
+      "velocity_rmse_mms": 2667.96,
+      "velocity_mae_mms": 1665.55,
+      "tracking_error_2d_px": 45.55,
+      "tracking_error_2d_max_px": 53.89,
+      "mean_displacement_px": 16.82,
+      "max_displacement_px": 100.86,
+      "video_path": "outputs\\cotracker_test_v2\\videos\\000058_003_sugar_box_tracking_v2.mp4"
+    },
+    {
+      "scene_id": "000059",
+      "obj_id": 2,
+      "obj_name": "002_cracker_box",
+      "num_frames": 60,
+      "num_points": 9,
+      "tracking_time_s": 11.0,
+      "visibility_rate": 0.2241,
+      "tracking_accuracy": 1.0,
+      "in_mask_count": 121,
+      "total_visible": 121,
+      "velocity_rmse_mms": 1667.5,
+      "velocity_mae_mms": 908.62,
+      "tracking_error_2d_px": 86.2,
+      "tracking_error_2d_max_px": 100.61,
+      "mean_displacement_px": 36.9,
+      "max_displacement_px": 218.31,
+      "video_path": "outputs\\cotracker_test_v2\\videos\\000059_002_cracker_box_tracking_v2.mp4"
+    }
+  ],
+  "summary": {
+    "avg_visibility_rate": 0.3537,
+    "avg_tracking_accuracy": 0.8694500000000001,
+    "avg_2d_tracking_error_px": 65.875,
+    "avg_velocity_rmse_mms": 2167.73,
+    "avg_tracking_time_s": 11.235
+  }
+}
