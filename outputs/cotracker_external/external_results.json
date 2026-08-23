@@ -1,0 +1,23 @@
+{
+  "model": "CoTracker3 (scaled_offline)",
+  "test": "external_videos",
+  "num_videos": 1,
+  "results": [
+    {
+      "video": "apple.mp4",
+      "frames": 50,
+      "fps": 10.0,
+      "resolution": "1296x720",
+      "num_points": 400,
+      "tracking_time_s": 25.14,
+      "visibility_rate": 0.7336,
+      "moving_points": 384,
+      "static_points": 16,
+      "mean_pixel_disp_per_frame": 11.34,
+      "max_pixel_disp_per_frame": 38.3,
+      "mean_total_pixel_disp": 402.07,
+      "max_total_pixel_disp": 769.56,
+      "video_output": "outputs\\cotracker_external\\videos\\apple_cotracker.mp4"
+    }
+  ]
+}
