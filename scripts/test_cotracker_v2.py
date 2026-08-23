@@ -155,8 +155,17 @@ def get_object_size(models_dir, obj_id):
 def create_tracking_video(rgb_frames, tracks, visibilities, output_path, fps=15, gt_velocity=None, pred_velocity=None):
     """生成带跟踪点叠加 + 速度信息的视频"""
     H, W = rgb_frames[0].shape[:2]
-    fourcc = cv2.VideoWriter_fourcc(*"mp4v")
-    writer = cv2.VideoWriter(str(output_path), fourcc, fps, (W, H))
+    panel_h = 100
+    total_h = H + panel_h
+    # 用 XVID 编码器 + .avi 容器，兼容性最好
+    if str(output_path).endswith(".mp4"):
+        output_path = str(output_path).replace(".mp4", ".avi")
+    fourcc = cv2.VideoWriter_fourcc(*"XVID")
+    writer = cv2.VideoWriter(str(output_path), fourcc, fps, (W, total_h))
+    if not writer.isOpened():
+        # 回退到 mp4v
+        fourcc = cv2.VideoWriter_fourcc(*"mp4v")
+        writer = cv2.VideoWriter(str(output_path), fourcc, fps, (W, total_h))
 
     T = len(rgb_frames)
     N = tracks.shape[1]
@@ -185,7 +194,6 @@ def create_tracking_video(rgb_frames, tracks, visibilities, output_path, fps=15,
                 cv2.circle(frame, (int(x), int(y)), 6, (255, 255, 255), 1)
 
         # 信息面板
-        panel_h = 100
         panel = np.zeros((panel_h, W, 3), dtype=np.uint8)
         panel[:] = (30, 30, 30)
 
@@ -204,7 +212,11 @@ def create_tracking_video(rgb_frames, tracks, visibilities, output_path, fps=15,
         writer.write(frame_with_panel)
 
     writer.release()
-    print(f"  Video saved: {output_path}")
+    file_size = os.path.getsize(str(output_path))
+    if file_size < 1000:
+        print(f"  WARNING: Video file too small ({file_size} bytes), encoder may have failed")
+    else:
+        print(f"  Video saved: {output_path} ({file_size/1024:.0f} KB)")
 
 
 def compute_gt_velocity(poses, fps=30.0):
