@@ -1,0 +1,77 @@
+{
+  "video": "obj1_rgb",
+  "type": "RGB",
+  "frames": 300,
+  "resolution": "1280x720",
+  "grid_size": 20,
+  "points": 400,
+  "visibility": 0.8882,
+  "moving_points": 400,
+  "max_pixel_disp": 859.32,
+  "mean_pixel_disp": 132.17,
+  "max_speed_px_per_frame": 40.83,
+  "mean_speed_px_per_frame": 3.52,
+  "top_10_points": [
+    {
+      "point": 109,
+      "disp_px": 859.32,
+      "speed_px_f": 39.82,
+      "vis": 1.0
+    },
+    {
+      "point": 129,
+      "disp_px": 855.56,
+      "speed_px_f": 40.83,
+      "vis": 1.0
+    },
+    {
+      "point": 169,
+      "disp_px": 752.68,
+      "speed_px_f": 37.85,
+      "vis": 1.0
+    },
+    {
+      "point": 149,
+      "disp_px": 739.27,
+      "speed_px_f": 27.46,
+      "vis": 0.9967
+    },
+    {
+      "point": 189,
+      "disp_px": 715.19,
+      "speed_px_f": 36.71,
+      "vis": 1.0
+    },
+    {
+      "point": 188,
+      "disp_px": 586.92,
+      "speed_px_f": 31.93,
+      "vis": 0.9267
+    },
+    {
+      "point": 113,
+      "disp_px": 575.78,
+      "speed_px_f": 11.77,
+      "vis": 1.0
+    },
+    {
+      "point": 114,
+      "disp_px": 557.32,
+      "speed_px_f": 12.58,
+      "vis": 1.0
+    },
+    {
+      "point": 229,
+      "disp_px": 540.54,
+      "speed_px_f": 33.44,
+      "vis": 0.9867
+    },
+    {
+      "point": 93,
+      "disp_px": 536.61,
+      "speed_px_f": 12.26,
+      "vis": 0.9467
+    }
+  ],
+  "video_output": "outputs\\cotracker_final\\videos\\obj1_rgb_final_tracking.mp4"
+}
